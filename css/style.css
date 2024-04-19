@@ -1,0 +1,293 @@
+/* Importar una fuente de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+
+/* Estilos generales del contenedor principal */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-image: url(../assets/background-2402703_1280.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: 'Merriweather', serif;
+}
+
+/* Estilos del contenedor interno */
+.wrapper {
+  width: 605px;
+  background-color: #f3f3f3;
+  border-radius: 15px;
+  padding: 30px 30px 25px 25px;
+}
+
+/* Estilos del encabezado dentro del contenedor */
+.wrapper__header {
+  font-size: 35px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Estilos del contenido dentro del contenedor */
+.wrapper__content {
+  margin: 35px 0;
+}
+
+/* Estilos del área de cita */
+.quote__area {
+  display: flex;
+  justify-content: center;
+}
+
+/* Estilos de los iconos dentro del área de cita */
+.quote__area i:first-child {
+  margin: 3px 10px 0 0;
+}
+
+.quote__area i:last-child {
+  display: flex;
+
+  align-items: flex-end;
+  margin: 0 0 3px 10px;
+}
+
+/* Estilos del texto de la cita */
+.quote {
+  font-size: 22px;
+  text-align: center;
+}
+
+/* Estilos del autor del contenido */
+.content__author {
+  display: flex;
+  justify-content: flex-end;
+  margin: 20px;
+  font-style: italic;
+  margin-top: 30px;
+  font-style: 18px;
+}
+
+.content__author span:first-child {
+  margin: -7px 2px 0 0;
+  font-family: monospace;
+}
+
+/* Estilos del botón */
+.wrapper__button {
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  padding-block: 0.5rem;
+  padding-inline: 1.25rem;
+  background-color: #F25EB0;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffff;
+  gap: 10px;
+  font-weight: bold;
+  border: 3px solid #ffffff4d;
+  outline: none;
+  overflow: hidden;
+  font-size: 15px;
+}
+
+/* Estilos del botón al pasar el mouse sobre él */
+.wrapper__button:hover {
+  transform: scale(1.05);
+  border-color: #fff9;
+}
+
+.wrapper__button:hover .icon {
+  transform: translate(4px);
+}
+
+/* Estilos del efecto de brillo del botón */
+.wrapper__button:hover::before {
+  animation: shine 1.5s ease-out infinite;
+}
+
+.wrapper__button::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100%;
+  background-image: linear-gradient(120deg,
+      rgba(255, 255, 255, 0) 30%,
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0) 70%);
+  top: 0;
+  left: -100px;
+  opacity: 0.6;
+}
+
+/* Animación del efecto de brillo */
+@keyframes shine {
+  0% {
+    left: -100px;
+  }
+
+  60% {
+    left: 100%;
+  }
+
+  to {
+    left: 100%;
+  }
+}
+
+/* Separador horizontal */
+hr{
+  border: 1px solid #F25EB080;
+}
+
+/* Estilos de las características */
+.features {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 20px;
+}
+
+li::after {
+  content: "";
+  display: block;
+  height: 0px;
+  transition: height 0.3s ease-in-out;
+  pointer-events: none;
+}
+
+li:hover::after {
+  height: 10px;
+}
+
+/* Estilos de la lista de características */
+.features__list {
+  display: flex;
+  gap: 5px;
+  height: 50px;
+  width: 200px;
+}
+
+/* Estilos de los íconos en la lista de características */
+.features__list i {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+  height: 100%;
+  font-size: 24px;
+  font-weight: 700;
+  opacity: 1;
+  transition: opacity 0.25s;
+  z-index: 2;
+  cursor: pointer;
+}
+
+/* Estilos de los botones en la lista de características */
+.features__list .sound,
+.features__list .copy,
+.features__list .twitter {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25%;
+  font-size: 24px;
+  text-decoration: none;
+  transition: 0.25s;
+  border-radius: 50px;
+}
+
+.features__list i {
+  transform: scale(1);
+}
+
+/* Estilos de los elementos de la lista de características al pasar el mouse sobre ellos */
+.features__list i:hover {
+  color: #f3f3f3;
+}
+
+/* Estilos de los botones en la lista de características al pasar el mouse sobre ellos */
+.features__list .sound:hover {
+  background-color: #D9B0CE;
+  animation: bounce 0.4s linear;
+}
+
+.features__list .copy:hover {
+  background-color: #F25EB0;
+  animation: bounce 0.4s linear;
+}
+
+.features__list .twitter:hover {
+  background-color: #A682D9;
+  animation: bounce 0.4s linear;
+}
+
+/* Animación de rebote */
+@keyframes bounce {
+  40% {
+    transform: scale(1.4);
+  }
+
+  60% {
+    transform: scale(0.8);
+  }
+
+  80% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Para pantallas más pequeñas que 768px */
+@media (max-width: 767px) {
+  .container {
+    padding: 20px;
+  }
+
+  .wrapper {
+    width: 100%;
+  }
+
+  .wrapper__header {
+    font-size: 30px;
+  }
+
+  .quote__area {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .quote__area i:first-child {
+    margin-bottom: 10px;
+  }
+
+  .quote__area i:last-child {
+    margin-top: 10px;
+  }
+
+  .quote {
+    font-size: 18px;
+  }
+
+  .content__author {
+    margin-top: 20px;
+    font-size: 16px;
+  }
+
+  .features__list {
+    justify-content: center;
+    height: 40px;
+    width: 150px;
+  }
+
+  .features__list i {
+    font-size: 20px;
+  }
+}

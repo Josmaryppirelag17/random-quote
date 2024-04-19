@@ -1,0 +1,134 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  color: var(--text);
+  border: 0;
+  box-sizing: border-box;
+}
+
+/* Configuramos la tipografía para toda la web */
+body {
+  background-color: var(--fourth-color);
+  font-family: var(--tipo-principal);
+  background: var(--fourth-color);
+  color: var(--first-color);
+}
+
+section {
+  height: 100vh;
+  font-size: 100%;
+  line-height: 1.4em;
+  scroll-snap-align: center;
+}
+
+.pages {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.section-title {
+  color: var(--first-color);
+    font-size: 70px;
+}
+
+/* Evitamos problemas con los SVG */
+svg {
+  fill: currentColor;
+}
+
+/* Reseteamos las tablas */
+table,
+tr,
+td {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Nivelamos problemas de tipografías y colocación de formularios */
+form,
+input,
+textarea,
+select,
+button,
+label {
+  font-family: inherit;
+  font-size: inherit;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  background-color: transparent;
+  color: inherit;
+  display: block;
+}
+
+
+/* Desactivamos estilos por defecto de las principales etiquetas de texto */
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+h6,
+p,
+span,
+a,
+strong,
+blockquote,
+i,
+b,
+u,
+em {
+  font-size: 1em;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Reseteamos los enlaces para funcionar como cajas... */
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+}
+
+/* ... excepto los que se encuentran en párrafos */
+p a {
+  display: inline;
+}
+
+/* Quitamos los puntos de los <li> */
+li {
+  list-style-type: none;
+}
+
+/* Evitamos problemas con las imagenes */
+img,
+picture,
+video,
+iframe,
+figure {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+}

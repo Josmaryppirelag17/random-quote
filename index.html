@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="/assets/logo.png" type="image/x-icon">
+    <title>Random Quote</title>
+
+    <!-- Hoja de estilos -->
+
+    <!-- Enlace a la hoja de estilos personalizada -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- Enlace a la hoja de estilos normalize para normalizar los estilos entre navegadores -->
+    <link rel="stylesheet" href="./css/normalize.css" />
+
+    <!-- Enlace a Font Awesome para los iconos -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+  <body class="container">
+    <div class="wrapper">
+        <!-- Encabezado del contenedor -->
+      <header class="wrapper__header">
+        <h1>Frase del dia</h1>
+      </header>
+
+        <!-- Contenido principal -->
+      <div class="wrapper__content">
+          <!-- Área de la cita -->
+        <div class="quote__area">
+          <i class="fa-solid fa-quote-left"></i>
+          <p class="quote"></p>
+          <i class="fa-solid fa-quote-right"></i>
+        </div>
+
+          <!-- Autor de la cita -->
+        <div class="content__author">
+          <span>__</span>
+          <span class="name"></span>
+        </div>
+        <hr />
+        <div class="buttons">
+          <!-- Botones -->
+          <div class="features">
+            <ul class="features__list">
+              <!-- Botones de acciones -->
+              <li class="sound">
+                <i class="fa-solid fa-volume-high"></i>
+              </li>
+              <li class="copy"><i class="fa-solid fa-copy"></i></li>
+              <li class="twitter"><i class="fa-brands fa-x-twitter"></i></li>
+            </ul>
+            <!-- Botón para obtener una nueva frase -->
+            <button class="wrapper__button">Nueva Frase</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+    <!-- Script de la aplicación -->
+  </body>
+</html>
